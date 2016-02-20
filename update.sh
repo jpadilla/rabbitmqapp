@@ -21,19 +21,19 @@ VERSION=$(curl -s https://rabbitmq.com/download.html | grep -o 'The latest relea
 echo "--> Current RabbitMQ version: $VERSION"
 
 # =========================== COMPARE VERSIONS =================================
-# if [ "$FORCE" != true ] && [ "$CURR_RABBITMQ" == "$VERSION" ]; then
-#   echo " -- No need to update :)"
-#   echo "==> Done!"
-#   exit 0
-# fi
+if [ "$FORCE" != true ] && [ "$CURR_RABBITMQ" == "$VERSION" ]; then
+  echo " -- No need to update :)"
+  echo "==> Done!"
+  exit 0
+fi
 
 # =========================== DOWNLOAD =========================================
 # Create download url
-DOWNLOAD_URL="https://rabbitmq.com/releases/rabbitmq-server/v$VERSION/rabbitmq-server-generic-unix-$VERSION.tar.xz"
+DOWNLOAD_URL="https://rabbitmq.com/releases/rabbitmq-server/v$VERSION/rabbitmq-server-mac-standalone-$VERSION.tar.xz"
 
 # Download latest stable release version
 echo "--> Downloading: $DOWNLOAD_URL"
-curl -o /tmp/rabbitmq.tar.gz $DOWNLOAD_URL
+curl -o /tmp/rabbitmq.tar.xz $DOWNLOAD_URL
 
 # Clean old rabbitmq dir
 VENDOR_DIR="$(pwd)/Vendor/rabbitmq"
@@ -47,23 +47,24 @@ mkdir -p $VENDOR_DIR
 
 # Extract
 echo "--> Unzipping..."
-tar xvzf /tmp/rabbitmq.tar.gz -C /tmp
+tar xvzf /tmp/rabbitmq.tar.xz -C /tmp
 
 # Move files
 echo "--> Moving files to $VENDOR_DIR"
-mv "/tmp/rabbitmq_server-$VERSION*/*" $VENDOR_DIR
+mv "/tmp/rabbitmq_server-$VERSION"/* $VENDOR_DIR
 
 # Cleanup
-echo "--> Removing /tmp/rabbitmq.tar.gz"
-rm /tmp/rabbitmq.tar.gz
+echo "--> Removing /tmp/rabbitmq.tar.xz"
+rm /tmp/rabbitmq.tar.xz
 
-echo "--> Removing /tmp/rabbitmq_server-$VERSION*/*"
-rm -r "/tmp/rabbitmq_server-$VERSION*/*"
+echo "--> Removing /tmp/rabbitmq_server-$VERSION"
+rm -r "/tmp/rabbitmq_server-$VERSION"
 
 echo "--> Download completed!"
 
 # =========================== BUILD ============================================
 echo '--> Building'
+
 # Use sequential build numbers
 if [ "$FORCE" ]; then
   NEW_BUILD=$((CURR_BUILD + 1))
