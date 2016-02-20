@@ -4,9 +4,9 @@
 
 *Just download, drag to the applications folder, and double-click.*
 
-![Screenshot](https://jpadilla.github.io/rabbitmq/assets/img/screenshot.png)
+![Screenshot](https://jpadilla.github.io/rabbitmqapp/assets/img/screenshot.png)
 
-### [Download](http://jpadilla.github.io/rabbitmq)
+### [Download](http://jpadilla.github.io/rabbitmqapp)
 
 --
 
