@@ -1,6 +1,6 @@
 # RabbitMQ.app
 
-### The easiest way to get started with Rabbit on the Mac
+### The easiest way to get started with RabbitMQ on the Mac
 
 *Just download, drag to the applications folder, and double-click.*
 
