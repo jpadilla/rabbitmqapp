@@ -10,6 +10,7 @@
 		3D86A4F01C78967900412EFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D86A4EF1C78967900412EFF /* AppDelegate.swift */; };
 		3D86A4F21C78967900412EFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D86A4F11C78967900412EFF /* Assets.xcassets */; };
 		3D86A4F51C78967900412EFF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D86A4F31C78967900412EFF /* MainMenu.xib */; };
+		3D86A5001C78D1BB00412EFF /* Vendor in Resources */ = {isa = PBXBuildFile; fileRef = 3D86A4FF1C78D1BB00412EFF /* Vendor */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +19,7 @@
 		3D86A4F11C78967900412EFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D86A4F41C78967900412EFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		3D86A4F61C78967900412EFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D86A4FF1C78D1BB00412EFF /* Vendor */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Vendor; path = ../Vendor; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,9 +55,18 @@
 				3D86A4EF1C78967900412EFF /* AppDelegate.swift */,
 				3D86A4F11C78967900412EFF /* Assets.xcassets */,
 				3D86A4F31C78967900412EFF /* MainMenu.xib */,
-				3D86A4F61C78967900412EFF /* Info.plist */,
+				3D86A4FC1C78A99100412EFF /* Supporting Files */,
 			);
 			path = RabbitMQ;
+			sourceTree = "<group>";
+		};
+		3D86A4FC1C78A99100412EFF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3D86A4FF1C78D1BB00412EFF /* Vendor */,
+				3D86A4F61C78967900412EFF /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -117,6 +128,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D86A4F21C78967900412EFF /* Assets.xcassets in Resources */,
+				3D86A5001C78D1BB00412EFF /* Vendor in Resources */,
 				3D86A4F51C78967900412EFF /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
