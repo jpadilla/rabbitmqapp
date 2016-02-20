@@ -8,7 +8,7 @@ fi
 # =========================== CURRENT VERSION INFO =============================
 echo "--> Getting version numbers"
 
-CURR_VERSION=$(curl -s https://jpadilla.github.io/rabbitmq/ | grep -o '<div class="current-version">v.*' | grep -o '[0-9]*\.[0-9]*\.[0-9]*-build\.[0-9]*')
+CURR_VERSION=$(curl -s https://jpadilla.github.io/rabbitmqapp/ | grep -o '<div class="current-version">v.*' | grep -o '[0-9]*\.[0-9]*\.[0-9]*-build\.[0-9]*')
 
 CURR_RABBITMQ=$(echo $CURR_VERSION | grep -o '^[0-9]*\.[0-9]*\.[0-9]*')
 CURR_BUILD=$(echo $CURR_VERSION | grep -o '[0-9]*$')
@@ -103,7 +103,7 @@ mkdir -p ./_posts/release/
 echo "---
 version: $RELEASE_VERSION
 rabbitmq_version: $VERSION
-package_url: https://github.com/jpadilla/rabbitmq/releases/download/$RELEASE_VERSION/RabbitMQ.zip
+package_url: https://github.com/jpadilla/rabbitmqapp/releases/download/$RELEASE_VERSION/RabbitMQ.zip
 package_length: $FILE_SIZE
 category: release
 ---
@@ -119,7 +119,7 @@ echo "git tag $RELEASE_VERSION"
 echo "git push origin --tags"
 echo ""
 echo "Upload /tmp/RabbitMQ.zip to GitHub"
-echo "https://github.com/jpadilla/rabbitmq/releases/tag/$RELEASE_VERSION"
+echo "https://github.com/jpadilla/rabbitmqapp/releases/tag/$RELEASE_VERSION"
 echo ""
 echo "git co gh-pages"
 echo "git add ."
