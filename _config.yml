@@ -1,0 +1,8 @@
+name: RabbitMQ.app
+url: https://jpadilla.github.io/rabbitmq
+description: The easiest way to get started with RabbitMQ on the Mac
+repoUrl: https://github.com/jpadilla/rabbitmq
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
