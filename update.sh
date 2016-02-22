@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+CURR_DIR=$(pwd)
+
 # =========================== CHECK FORCE FLAG =================================
 if [ "$1" == "--force" ]; then
   FORCE=true
@@ -90,11 +92,11 @@ echo " -- Build completed!"
 echo '--> Release'
 echo " -- Zip"
 cd build/Release
-zip -r -y "/tmp/RabbitMQ.zip" RabbitMQ.app
+zip -r -y "$CURR_DIR/RabbitMQ.zip" RabbitMQ.app
 cd ../../
 
 # Get zip file size
-FILE_SIZE=$(du "/tmp/RabbitMQ.zip" | cut -f1)
+FILE_SIZE=$(du "$CURR_DIR/RabbitMQ.zip" | cut -f1)
 
 echo " -- Create AppCast post"
 rm -rf ./_posts/release
@@ -118,7 +120,7 @@ echo "git commit -am 'Release $RELEASE_VERSION'"
 echo "git tag $RELEASE_VERSION"
 echo "git push origin --tags"
 echo ""
-echo "Upload /tmp/RabbitMQ.zip to GitHub"
+echo "Upload RabbitMQ.zip to GitHub"
 echo "https://github.com/jpadilla/rabbitmqapp/releases/tag/$RELEASE_VERSION"
 echo ""
 echo "git co gh-pages"
