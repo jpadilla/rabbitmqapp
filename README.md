@@ -30,7 +30,7 @@ PATH="/Applications/RabbitMQ.app/Contents/Resources/Vendor/rabbitmq/sbin:$PATH"
 You can also install RabbitMQ.app with [Homebrew Cask](http://caskroom.io/).
 
 ```bash
-$ brew cask install rabbitmq
+$ brew cask install rabbitmq-app
 ```
 
 ### Credits
