@@ -25,6 +25,13 @@ If you need to add the RabbitMQ binaries to your path you can do so by adding th
 PATH="/Applications/RabbitMQ.app/Contents/Resources/Vendor/rabbitmq/sbin:$PATH"
 ```
 
+Or using the `path_helper` alternative:
+ 
+ ```bash
+sudo mkdir -p /etc/paths.d &&
+echo /Applications/RabbitMQ.app/Contents/Resources/Vendor/rabbitmq/sbin | sudo tee /etc/paths.d/rabbitmqapp
+ ```
+
 ### Installing with Homebrew Cask
 
 You can also install RabbitMQ.app with [Homebrew Cask](http://caskroom.io/).
