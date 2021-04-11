@@ -37,7 +37,7 @@ echo /Applications/RabbitMQ.app/Contents/Resources/Vendor/rabbitmq/sbin | sudo t
 You can also install RabbitMQ.app with [Homebrew Cask](http://caskroom.io/).
 
 ```bash
-$ brew cask install rabbitmq
+$ brew install --cask rabbitmq
 ```
 
 ### Credits
