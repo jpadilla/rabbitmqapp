@@ -34,10 +34,10 @@ echo /Applications/RabbitMQ.app/Contents/Resources/Vendor/rabbitmq/sbin | sudo t
 
 ### Installing with Homebrew Cask
 
-You can also install RabbitMQ.app with [Homebrew Cask](http://caskroom.io/).
+You can also install RabbitMQ.app with [Homebrew Cask](https://formulae.brew.sh/cask/jpadilla-rabbitmq#default).
 
 ```bash
-$ brew cask install rabbitmq
+$ brew install --cask jpadilla-rabbitmq
 ```
 
 ### Credits
